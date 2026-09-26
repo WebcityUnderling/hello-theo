@@ -1,0 +1,8 @@
+{
+  "example-favourite": {
+    "name": "Example favourite",
+    "reason": "Replace this example with one of your favourites.",
+    "description": "Add more detail about it and what makes it special to you.",
+    "category": "Choose a category"
+  }
+}

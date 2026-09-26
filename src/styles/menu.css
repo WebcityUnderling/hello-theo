@@ -1,0 +1,8 @@
+/* Basic menu spacing. TASK 5: design the menu and add its hover dropdown. */
+.site-menu {
+  max-width: 960px;
+  margin-inline: auto;
+  padding: 16px;
+}
+
+/* Add the dropdown's hidden state and :hover rules here. */

@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import favourites from '../../data/favourites.json';
+
+// Astro's file-based router uses this template for /favourites/<slug>/.
+// Each JSON key is a slug: a short URL name such as "my-favourite-game".
+// Adding an entry to the JSON creates another page when the site builds.
+export function getStaticPaths() {
+  return Object.entries(favourites).map(([slug, favourite]) => ({
+    params: { slug },
+    props: { favourite },
+  }));
+}
+
+const { favourite } = Astro.props;
+---
+
+<BaseLayout title={`${favourite.name} | My website`} description={favourite.reason}>
+  <a href="/">Back to home</a>
+  <h1>{favourite.name}</h1>
+  <!--
+    TASK 4: Build the rest of the detail page here.
+    Show the reason, description, category, and any extra fields you add.
+    Access each field with favourite.fieldName inside curly braces.
+    This one template is shared by every favourite; do not copy it per entry.
+  -->
+</BaseLayout>

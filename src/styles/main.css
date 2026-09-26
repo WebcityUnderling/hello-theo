@@ -1,0 +1,42 @@
+/* Keep imports at the top. All site styles enter through this file. */
+@import './theme.css';
+@import './menu.css';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+main {
+  max-width: 960px;
+  margin-inline: auto;
+  padding: 32px 16px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+}
+
+a {
+  color: var(--color-accent);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* TASK 3: Add your section styles, spacing, and layout rules below. */
+
+

@@ -1,0 +1,16 @@
+---
+// Imports let us put components together to make a page.
+import BaseLayout from "../layouts/BaseLayout.astro";
+import AboutMe from "../components/AboutMe.astro";
+import Favourites from "../components/Favourites.astro";
+---
+
+<BaseLayout>
+	<div>
+		<h1>My website</h1>
+		<p>A little about me and my favourite things.</p>
+	</div>
+
+	<AboutMe />
+	<Favourites />
+</BaseLayout>

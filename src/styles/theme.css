@@ -1,0 +1,8 @@
+/* TASK 3: Change these values and watch the page update. */
+:root {
+  --color-background: #faf8f5;
+  --color-text: #282c34;
+  --color-accent: #365ac2;
+  --font-body: Arial, sans-serif;
+  --font-heading: Georgia, serif;
+}

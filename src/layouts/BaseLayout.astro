@@ -1,0 +1,25 @@
+---
+import "../styles/main.css";
+import Menu from "../components/Menu.astro";
+
+// Pages can supply their own title and description, or use these defaults.
+const { title = "My website", description = "A little about me and my favourite things." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- Task 1: personalise the browser tab title and description too. -->
+		<title>{title}</title>
+		<meta name="description" content={description} />
+	</head>
+	<body>
+		<!-- TASK 5: Add a menu -->
+		<!-- <Menu /> -->
+		<main>
+			<slot />
+		</main>
+	</body>
+</html>
