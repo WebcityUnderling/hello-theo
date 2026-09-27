@@ -1,42 +1,118 @@
 /* Keep imports at the top. All site styles enter through this file. */
-@import './theme.css';
-@import './menu.css';
+@import "./theme.css";
+@import "./menu.css";
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  background: var(--color-background);
-  color: var(--color-text);
-  font-family: var(--font-body);
-  line-height: 1.6;
+	margin: 0;
+	background: var(--color-background);
+	color: var(--color-text);
+	font-family: var(--font-body);
+	line-height: 1.6;
 }
 
 main {
-  max-width: 960px;
-  margin-inline: auto;
-  padding: 32px 16px;
+	max-width: 960px;
+	margin-inline: auto;
+	padding: 32px 16px;
 }
 
 h1,
 h2,
 h3 {
-  font-family: var(--font-heading);
-  line-height: 1.2;
+	font-family: var(--font-heading);
+	line-height: 1.2;
 }
 
 a {
-  color: var(--color-accent);
+	color: var(--color-accent);
 }
 
 img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+	display: block;
+	max-width: 100%;
+	height: auto;
 }
 
 /* TASK 3: Add your section styles, spacing, and layout rules below. */
+/* Shared */
+.card {
+	padding: 20px;
+	border-radius: 12px;
+	border: 2px solid var(--color-accent);
+	box-shadow: 0px 4px 12px rgba(80, 80, 80, 0.4);
+}
 
+/* About Me */
+.about-me {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	gap: 42px;
+}
 
+.about-me__image img {
+	border-radius: 999px;
+	overflow: hidden;
+	border: 2px solid var(--color-accent);
+}
+
+/* Favourites */
+
+.top-10 {
+	margin-top: 32px;
+}
+
+.top-10__tiles {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 32px;
+}
+
+.top-10__tiles a {
+	text-decoration: none;
+}
+
+.top-10__tile {
+	background: var(--color-background);
+	color: var(--color-text);
+	padding: 40px;
+	font-size: 80px;
+	display: flex;
+	justify-content: center;
+	font-weight: 600;
+}
+.top-10__tile span {
+	display: block;
+	text-decoration: underline;
+	text-decoration-thickness: 10px;
+	text-decoration-color: var(--color-accent);
+}
+
+.theme-card {
+	padding: 60px;
+	margin-top: 30px;
+	border-radius: 12px;
+	box-shadow: 0px 4px 12px rgba(80, 80, 80, 0.4);
+	background: var(--color-background);
+	color: var(--color-text);
+	font-size: 20px;
+}
+
+.theme-card h1 {
+	color: var(--color-accent);
+	font-size: 80px;
+	margin: 0 0 12px 0;
+}
+
+.theme-card button {
+	margin-right: 12px;
+	background-color: transparent;
+	border: 2px solid var(--color-accent);
+	color: var(--color-text);
+	padding: 12px;
+	border-radius: 4px;
+	cursor: pointer;
+}

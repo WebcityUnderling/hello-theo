@@ -1,8 +1,62 @@
 {
-  "example-favourite": {
-    "name": "Example favourite",
-    "reason": "Replace this example with one of your favourites.",
-    "description": "Add more detail about it and what makes it special to you.",
-    "category": "Choose a category"
-  }
+	"lush": {
+		"name": "Lush",
+		"background": "#00452D",
+		"text": "#EAFF9F",
+		"accent": "#04C246"
+	},
+	"domino": {
+		"name": "Domino",
+		"background": "#F8F2E0",
+		"text": "#2B2630",
+		"accent": "#9E0000"
+	},
+	"paradise": {
+		"name": "Paradise",
+		"background": "#A7056F",
+		"text": "#FFEB52",
+		"accent": "#FFADAE"
+	},
+	"concrete": {
+		"name": "Concrete",
+		"background": "#353642",
+		"text": "#FFFFFF",
+		"accent": "#FFD042"
+	},
+	"garden": {
+		"name": "Garden",
+		"background": "#432B15",
+		"text": "#A1FF91",
+		"accent": "#FFADD7"
+	},
+	"ocean": {
+		"name": "Ocean",
+		"background": "#151C43",
+		"text": "#5ADEFF",
+		"accent": "#48F5B5"
+	},
+	"holiday": {
+		"name": "Holiday",
+		"background": "#F4F2E1",
+		"text": "#007E52",
+		"accent": "#D50E43"
+	},
+	"citrus": {
+		"name": "Citrus",
+		"background": "#DC3412",
+		"text": "#FFEFDB",
+		"accent": "#FFEB52"
+	},
+	"dusk": {
+		"name": "Dusk",
+		"background": "#BE6FFF",
+		"text": "#000000",
+		"accent": "#7F0002"
+	},
+	"hazard": {
+		"name": "Hazard",
+		"background": "#FFDD35",
+		"text": "#2C2C2C",
+		"accent": "#2C2C2C"
+	}
 }

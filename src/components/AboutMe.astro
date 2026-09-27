@@ -1,4 +1,5 @@
 ---
+import myFace from "../assets/my-face.jpg";
 // TASK 1: About me
 // This area between the --- lines is called frontmatter.
 // Put your image import here after adding a file to src/assets/.
@@ -14,3 +15,28 @@
   This component is already imported and displayed by src/pages/index.astro.
   Save this file and look at the browser to see your changes.
 -->
+
+<div class="about-me card">
+	<div class="about-me__image">
+		<img
+			src={myFace.src}
+			width={myFace.width}
+			height={myFace.height}
+			alt="Dramatic lighting photograph of website author"
+		/>
+	</div>
+	<div class="about-me__text-content">
+		<h2>Hello, I'm Sarah.</h2>
+		<p>
+			I develop creative and technical applications for&nbsp;
+			<a href="https://neonjungle.studio/" target="_blank">
+				Neon Jungle
+			</a>
+		</p>
+		<p>
+			I love making custom solutions that help tasmanian businesses. In my spare time I like landscaping and gardening
+			on my property, cooking, and walking my dog. I also am learning tapestry crochet, which is great to fill in the
+			time when the weather is dreary outside.
+		</p>
+	</div>
+</div>

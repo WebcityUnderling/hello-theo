@@ -11,6 +11,8 @@
 // LATER, TASK 4: Move your data to src/data/favourites.json and import it here.
 // Replace your local object with the shared data and link each name to its page.
 // See README.md for the new data shape and a link hint.
+
+import themes from "../data/favourites.json";
 ---
 
 <!--
@@ -23,3 +25,21 @@
   This generates HTML at build time; no browser script is needed yet.
   See README.md for a smaller example if you get stuck.
 -->
+
+<div class="top-10 card">
+	<h2>Best colour themes</h2>
+	<div class="top-10__tiles">
+		{Object.entries(themes).map(([slug, theme]) => (
+			<a href={`/favourites/${slug}`}>
+				<span>{theme.name}</span>
+				<div
+					style={`--color-background:${theme.background}; --color-text:${theme.text}; --color-accent:${theme.accent}`}
+					class="top-10__tile"
+					aria-hidden="true"
+				>
+					<span>Aa</span>
+				</div>
+			</a>
+		))}
+	</div>
+</div>

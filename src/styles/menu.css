@@ -1,8 +1,46 @@
 /* Basic menu spacing. TASK 5: design the menu and add its hover dropdown. */
 .site-menu {
-  max-width: 960px;
-  margin-inline: auto;
-  padding: 16px;
+	max-width: 960px;
+	margin-inline: auto;
+	padding: 16px;
+	display: flex;
+	gap: 32px;
+	align-items: start;
+	position: relative;
+	z-index: 20;
 }
 
-/* Add the dropdown's hidden state and :hover rules here. */
+.site-menu > a,
+.site-menu .favourites-menu > div {
+	padding: 20px;
+	background-color: #dedede;
+	color: black;
+}
+
+.favourites-menu {
+	position: relative;
+}
+
+.favourites-menu ul {
+	position: absolute;
+	background: #c8c7c7;
+	margin: 0;
+	width: 200px;
+	list-style-type: none;
+	padding: 0;
+	box-shadow: 0px 8px 8px rgba(10, 10, 10, 0.3);
+	display: none;
+}
+
+.favourites-menu:hover ul {
+	display: block;
+}
+
+.favourites-menu li a {
+	padding: 8px;
+	display: block;
+}
+
+.favourites-menu li a:hover {
+	background-color: #fefefe;
+}

@@ -1,5 +1,5 @@
 ---
-import favourites from '../data/favourites.json';
+import favourites from "../data/favourites.json";
 ---
 
 <!--
@@ -14,15 +14,15 @@ import favourites from '../data/favourites.json';
   See Task 5 in README.md for hints and optional extensions.
 -->
 <nav class="site-menu" aria-label="Main navigation">
-  <a href="/">Home</a>
-  <div class="favourites-menu">
-    <div>Favourites</div>
-    <ul>
-      {Object.entries(favourites).map(([slug, favourite]) => (
-        <li>
-          <a href={`/favourites/${slug}/`}>{favourite.name}</a>
-        </li>
-      ))}
-    </ul>
-  </div>
+	<a href="/">Home</a>
+	<div class="favourites-menu">
+		<div>Themes</div>
+		<ul>
+			{Object.entries(favourites).map(([slug, favourite]) => (
+				<li>
+					<a href={`/favourites/${slug}/`}>{favourite.name}</a>
+				</li>
+			))}
+		</ul>
+	</div>
 </nav>

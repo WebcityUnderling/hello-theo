@@ -1,24 +1,65 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import favourites from '../../data/favourites.json';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import favourites from "../../data/favourites.json";
 
 // Astro's file-based router uses this template for /favourites/<slug>/.
 // Each JSON key is a slug: a short URL name such as "my-favourite-game".
 // Adding an entry to the JSON creates another page when the site builds.
 export function getStaticPaths() {
-  return Object.entries(favourites).map(([slug, favourite]) => ({
-    params: { slug },
-    props: { favourite },
-  }));
+	return Object.entries(favourites).map(([slug, favourite]) => ({
+		params: { slug },
+		props: { favourite },
+	}));
 }
 
 const { favourite } = Astro.props;
 ---
 
-<BaseLayout title={`${favourite.name} | My website`} description={favourite.reason}>
-  <a href="/">Back to home</a>
-  <h1>{favourite.name}</h1>
-  <!--
+<script>
+	document.querySelectorAll("button[data-color]").forEach((button) => {
+		button.addEventListener("click", async () => {
+			const colour = button.getAttribute("data-color");
+			const originalText = button.textContent;
+			if (!colour) return;
+
+			try {
+				await navigator.clipboard.writeText(colour);
+				button.textContent = `Copied ${colour}!`;
+			} catch {
+				button.textContent = `Copy manually: ${colour}`;
+			} finally {
+				setTimeout(() => {
+					button.textContent = originalText;
+				}, 2000);
+			}
+		});
+	});
+</script>
+
+<BaseLayout title={`${favourite.name} | My website`}>
+	<div
+		class="theme-card"
+		style={`--color-background:${favourite.background}; --color-text:${favourite.text}; --color-accent:${favourite.accent}`}
+	>
+		<h1>{favourite.name}</h1>
+		<div>
+			<button data-color={favourite.background}>Copy Background color ({favourite.background})</button>
+			<button data-color={favourite.text}>Copy Text color ({favourite.text})</button>
+			<button data-color={favourite.accent}>Copy accent color ({favourite.accent})</button>
+		</div>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper condimentum molestie. Suspendisse id lorem
+			consectetur, vulputate orci sed, congue urna. Etiam aliquet lorem in sapien rutrum sodales nec eu enim. Nulla
+			cursus dolor porttitor lectus auctor, at eleifend ipsum commodo. Proin consequat sed elit non fringilla. Nam
+			gravida elit at lorem auctor pretium. Vivamus nisl dui, lacinia eu justo eu, euismod pulvinar eros. Vestibulum
+			placerat, quam et placerat sagittis, enim augue consectetur mauris, sit amet molestie justo arcu quis leo. Donec
+			eget enim lobortis, rutrum diam id, luctus est. Nulla aliquam, felis vitae ultricies bibendum, nibh mauris
+			elementum orci, eget fermentum augue ipsum et risus. Vestibulum semper, neque vitae gravida viverra, urna est
+			rhoncus purus, id sodales elit neque sit amet nulla. Donec eget ante in sem bibendum porttitor quis dictum ipsum.
+		</p>
+	</div>
+
+	<!--
     TASK 4: Build the rest of the detail page here.
     Show the reason, description, category, and any extra fields you add.
     Access each field with favourite.fieldName inside curly braces.
