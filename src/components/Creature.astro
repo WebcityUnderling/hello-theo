@@ -1,0 +1,36 @@
+---
+// CREATE YOUR OWN CREATURE
+// Full walkthrough: docs/create-a-creature.md
+// Finished example: src/components/CreatureExample.astro (view /creature-example)
+//
+// 1. Sketch your character and choose its colours and features.
+// 2. Find the pupil spans below. In the script, use querySelectorAll to select
+//    [data-follow-mouse], then pass the pupils to attachEyeTracking.
+//    This is connected already: read it and try moving the mouse.
+// 3. Add your feature elements inside the creature-features div.
+// 4. Style them in src/styles/creature.css. Use percentages for sizes and positions.
+// 5. Share styles with a base class, then use joined classes such as
+//    .ear.left and .ear.right to position matching features separately.
+// 6. Make shapes at https://bennettfeely.com/clippy/ and add their clip-path CSS.
+// 7. Use transform: rotate(...) to tilt features and give your character expression.
+// 8. Test the pupils, check your percentage values, and explain your design choices.
+---
+
+<div class="creature-base">
+    <!-- Eyes -->
+    <div class="eyes">
+        <div class="eye">
+            <span data-follow-mouse></span>
+        </div>
+        <div class="eye">
+            <span data-follow-mouse></span>
+        </div>
+    </div>
+    <!-- Features, add ears, nose, mouth and hair, and any other characteristics! -->
+    <div class="creature-features">
+    </div>
+</div>
+
+<script>
+//    Eye script goes here
+</script>
