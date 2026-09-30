@@ -94,7 +94,7 @@ The `creature-features` container is positioned and fills the base. With `positi
 
 **Use percentages for the sizes and positions you add or customise:** `width`, `height`, `top`, `left`, `right`, and `bottom`. Use percentage coordinates for your clip paths too. This will let the features scale with the character later. Rotation uses degrees because it describes an angle.
 
-The starter base currently has a fixed `500px` size; leave that setup in place for this exercise. The pupil helper also calculates movement in pixels automatically. Your feature CSS should use percentages.
+The base fills a square wrapper that is up to `500px` wide on the creature pages and `240px` wide on the Virtual Pet page. Leave that setup in place: your percentage-based features scale with it. The pupil helper also calculates movement in pixels automatically. Your feature CSS should use percentages.
 
 Percentages depend on the containing element. A feature directly inside `creature-features` is sized relative to that container; a pupil inside an eye is sized relative to the eye. If you nest a new shape inside a feature, its percentage sizes refer to that smaller container.
 

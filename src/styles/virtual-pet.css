@@ -1,0 +1,168 @@
+.virtual-pet-project {
+    max-width: 680px;
+    margin-inline: auto;
+    color: #24342c;
+    overflow-wrap: anywhere;
+}
+
+.virtual-pet-project h1 {
+    margin-bottom: 0.5rem;
+    font-size: clamp(2rem, 7vw, 3rem);
+}
+
+.virtual-pet-project a {
+    color: #24533c;
+    text-underline-offset: 0.2em;
+}
+
+.pet-learning-goal {
+    padding: 1rem;
+    border-left: 4px solid #346649;
+    background: #e9f1e6;
+}
+
+.pet-card,
+.pet-tasks {
+    margin-top: 1.5rem;
+    padding: clamp(1rem, 4vw, 2rem);
+    border: 1px solid #a8b8aa;
+    border-radius: 1rem;
+    background: #fff;
+}
+
+.pet-card {
+    text-align: center;
+}
+
+/* The same square wrapper supports the example and the student's creature. */
+.pet-creature {
+    max-width: 240px;
+    margin-bottom: 1.5rem;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+/* These animate the wrapper so the creature's centring and pupils still work. */
+.pet-creature.is-feeding {
+    animation: pet-munch 600ms ease-in-out;
+}
+
+.pet-creature.is-playing {
+    animation: pet-hop 800ms ease-in-out;
+}
+
+.pet-creature.is-resting {
+    animation: pet-breathe 1800ms ease-in-out;
+}
+
+@keyframes pet-munch {
+    0%, 50%, 100% { transform: scale(1); }
+    25%, 75% { transform: scale(1.06, 0.92); }
+}
+
+@keyframes pet-hop {
+    0%, 100% { transform: translateY(0) rotate(0); }
+    30% { transform: translateY(-8%) rotate(-5deg); }
+    65% { transform: translateY(-4%) rotate(5deg); }
+}
+
+@keyframes pet-breathe {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(0.97, 1.04); }
+}
+
+/* Student task: add this class when an attribute reaches zero. */
+.pet-creature.is-game-over {
+    opacity: 0;
+    animation: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pet-creature {
+        transition: none;
+    }
+
+    .pet-creature.is-feeding,
+    .pet-creature.is-playing,
+    .pet-creature.is-resting {
+        animation: none;
+    }
+}
+
+.pet-card h2 {
+    margin: 0.5rem 0;
+    font-size: 2rem;
+}
+
+.pet-happiness {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+#pet-status {
+    min-height: 3.2em;
+}
+
+.pet-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.pet-actions button {
+    flex: 1 1 120px;
+    min-height: 48px;
+    padding: 0.75rem 1rem;
+    border: 2px solid #346649;
+    border-radius: 0.6rem;
+    background: #edf3ea;
+    color: #24342c;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.pet-actions #feed-button {
+    background: #28553d;
+    color: #fff;
+}
+
+.pet-actions button:hover {
+    border-color: #182e20;
+    box-shadow: 0 0 0 1px #182e20;
+}
+
+.pet-actions button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.virtual-pet-project :focus-visible {
+    outline: 3px solid #793d9c;
+    outline-offset: 4px;
+}
+
+.pet-actions small {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: normal;
+}
+
+#unfinished-note {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+
+.pet-tasks h2 {
+    margin-top: 0;
+}
+
+.pet-tasks li + li {
+    margin-top: 0.6rem;
+}
+
+.pet-tasks ol,
+.pet-tasks ul {
+    padding-left: 1.5rem;
+}

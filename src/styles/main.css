@@ -2,6 +2,7 @@
 @import "./theme.css";
 @import "./menu.css";
 @import "./creature.css";
+@import "./virtual-pet.css";
 
 * {
 	box-sizing: border-box;
