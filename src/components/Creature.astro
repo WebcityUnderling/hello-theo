@@ -17,20 +17,35 @@
 ---
 
 <div class="creature-base">
-    <!-- Eyes -->
-    <div class="eyes">
-        <div class="eye">
-            <span data-follow-mouse></span>
-        </div>
-        <div class="eye">
-            <span data-follow-mouse></span>
-        </div>
-    </div>
-    <!-- Features, add ears, nose, mouth and hair, and any other characteristics! -->
-    <div class="creature-features">
-    </div>
+	<div class="ear left"></div>
+	<div class="ear right"></div>
+	<div class="creature-shape"></div>
+	<!-- Eyes -->
+	<div class="eyes">
+		<div class="eye">
+			<span data-follow-mouse></span>
+		</div>
+		<div class="eye">
+			<span data-follow-mouse></span>
+		</div>
+	</div>
+	<!-- Features, add ears, nose, mouth and hair, and any other characteristics! -->
+	<div class="creature-features">
+		<div class="cheek left"></div>
+		<div class="cheek right"></div>
+		<div class="patches">
+			<div class="patch top"></div>
+			<div class="patch bottom"></div>
+		</div>
+		<div class="beak"></div>
+		<div data-follow-mou class="eyebrows left"></div>
+		<div data-follow-mou class="eyebrows right"></div>
+	</div>
 </div>
 
 <script>
-//    Eye script goes here
+	import { attachEyeTracking } from "../utility/eyeMath.js";
+
+	const pupils = document.querySelectorAll("[data-follow-mouse]");
+	attachEyeTracking(pupils);
 </script>

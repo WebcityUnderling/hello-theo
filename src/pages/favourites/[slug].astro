@@ -1,24 +1,40 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import favourites from '../../data/favourites.json';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import favourites from "../../data/favourites.json";
 
 // Astro's file-based router uses this template for /favourites/<slug>/.
 // Each JSON key is a slug: a short URL name such as "my-favourite-game".
 // Adding an entry to the JSON creates another page when the site builds.
 export function getStaticPaths() {
-  return Object.entries(favourites).map(([slug, favourite]) => ({
-    params: { slug },
-    props: { favourite },
-  }));
+	return Object.entries(favourites).map(([slug, favourite]) => ({
+		params: { slug },
+		props: { favourite },
+	}));
 }
 
 const { favourite } = Astro.props;
 ---
 
 <BaseLayout title={`${favourite.name} | My website`} description={favourite.reason}>
-  <a href="/">Back to home</a>
-  <h1>{favourite.name}</h1>
-  <!--
+	<h1>{favourite.name}</h1>
+
+	<h2>Why I like {favourite.name}</h2>
+	<p>{favourite.reason}</p>
+
+	<h2>What is it?</h2>
+
+	<div class="div1">
+		<div class="div2">
+			<img src={favourite.image} width="300" height="300" alt="Minecraft" />
+			<alt>{favourite.image_description}</alt>
+		</div>
+
+		<div class="div3">
+			<p>{favourite.description}</p>
+		</div>
+	</div>
+
+	<!--
     TASK 4: Build the rest of the detail page here.
     Show the reason, description, category, and any extra fields you add.
     Access each field with favourite.fieldName inside curly braces.

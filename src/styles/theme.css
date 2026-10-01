@@ -1,8 +1,15 @@
 /* TASK 3: Change these values and watch the page update. */
 :root {
-  --color-background: #faf8f5;
-  --color-text: #282c34;
-  --color-accent: #365ac2;
-  --font-body: Arial, sans-serif;
-  --font-heading: Georgia, serif;
+	--color-background: #77aba6;
+	--color-text: #283428;
+	--color-accent: #bc591c;
+	--color-link: #744e20;
+	--color-menu: #ffffe0;
+	--color-menu_hover: #c1c1ac;
+	--color-drop_down: #caeded;
+	--color-drop_down_hover: #819898;
+	--color-menu_background: #adc595;
+	--font-body: Anta, sans-serif;
+	--font-heading: Rubik Dirt, serif;
+	--font-menu: Prompt, serif;
 }

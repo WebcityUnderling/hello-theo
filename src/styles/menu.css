@@ -1,8 +1,110 @@
 /* Basic menu spacing. TASK 5: design the menu and add its hover dropdown. */
 .site-menu {
-  max-width: 960px;
-  margin-inline: auto;
-  padding: 16px;
+	padding: 16px 32px 16px 32px;
+	background-color: var(--color-menu_background);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	position: relative;
+	z-index: 999;
 }
 
+.favourites-menu {
+	padding: 10px 30px 10px 30px;
+	background-color: var(--color-menu);
+	position: relative;
+	color: var(--color-text);
+	text-decoration: none;
+	font-family: "Prompt", serif;
+	font-weight: 800;
+}
+
+.favourites-menu:hover {
+	background-color: var(--color-menu_hover);
+}
+
+.favourites-menu:hover .drop_down-menu {
+	display: block;
+}
+
+.favourites-menu a {
+	color: var(--color-text);
+	text-decoration: none;
+	font-family: "Prompt", serif;
+	font-weight: 800;
+}
+
+.home-menu {
+	padding: 10px 30px 10px 30px;
+	background-color: var(--color-menu);
+}
+
+.home-menu:hover {
+	background-color: var(--color-menu_hover);
+}
+
+.home-menu a {
+	color: var(--color-text);
+	text-decoration: none;
+	font-family: "Prompt", serif;
+	font-weight: 800;
+}
+
+.drop_down-menu {
+	position: absolute;
+	padding: 00px 0px 0px 0px;
+	background-color: var(--color-drop_down);
+	width: 256px;
+	top: 25px;
+	left: 0px;
+	list-style-type: none;
+	display: none;
+}
+
+.tab-menu {
+	padding: 10px 10px 10px 20px;
+}
+
+.tab-menu:hover {
+	background-color: var(--color-drop_down_hover);
+}
+
+.creature-menu {
+	padding: 10px 30px 10px 30px;
+	background-color: var(--color-menu);
+}
+
+.creature-menu:hover {
+	background-color: var(--color-menu_hover);
+}
+
+.creature-menu a {
+	color: var(--color-text);
+	text-decoration: none;
+	font-family: "Prompt", serif;
+	font-weight: 800;
+}
+
+.virtual_pet-menu {
+	padding: 10px 30px 10px 30px;
+	background-color: var(--color-menu);
+}
+
+.virtual_pet-menu:hover {
+	background-color: var(--color-menu_hover);
+}
+
+.virtual_pet-menu a {
+	color: var(--color-text);
+	text-decoration: none;
+	font-family: "Prompt", serif;
+	font-weight: 800;
+}
+
+hr {
+	border-bottom-width: 5px;
+	border-radius: 1000px;
+	margin: 0px;
+	border-color: #333333;
+}
 /* Add the dropdown's hidden state and :hover rules here. */

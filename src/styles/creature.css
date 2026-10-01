@@ -1,6 +1,6 @@
 :root {
 	--creature-base-color: #4972ff;
-	--creature-eye-size: 30%;
+	--creature-eye-size: 15%;
 	--creature-pupil-size: 70%;
 }
 
@@ -17,14 +17,24 @@
 	transform: translate(-50%, -50%);
 	top: 50%;
 	left: 50%;
-	background-color: var(--creature-base-color);
 	width: 100%;
 	height: 100%;
 }
 
+.creature-shape {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	background-color: var(--creature-base-color);
+	width: 100%;
+	height: 100%;
+	clip-path: polygon(25% 10%, 75% 10%, 100% 60%, 75% 100%, 25% 100%, 0% 60%);
+}
+
 .eyes {
 	top: 30%;
-	gap: 3%;
+	gap: 10%;
 	position: absolute;
 	display: flex;
 	justify-content: center;
@@ -64,3 +74,94 @@
 /* Add updates to the base and eyes (if you like!) */
 
 /* Your features here */
+
+.cheek {
+	position: absolute;
+	width: 15%;
+	height: 15%;
+	top: 45%;
+	background-color: #ffabab;
+	border-radius: 50%;
+	clip-path: polygon(0% 50%, 50% 0%, 100% 50%, 50% 100%);
+}
+
+.cheek.left {
+	left: 10%;
+}
+
+.cheek.right {
+	right: 10%;
+}
+
+.patches {
+	display: flex;
+	justify-content: center;
+}
+
+.patch {
+	position: absolute;
+	background-color: #ffffdf;
+}
+
+.patch.top {
+	width: 30%;
+	height: 30%;
+	top: 10%;
+	clip-path: circle(50% at 50% 0%);
+}
+
+.patch.bottom {
+	width: 40%;
+	height: 40%;
+	bottom: 0%;
+	clip-path: circle(50% at 50% 100%);
+}
+
+.beak {
+	position: absolute;
+	background-color: #ffff80;
+	width: 10%;
+	height: 10%;
+	top: 55%;
+	left: 45%;
+	clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+}
+
+.ear {
+	position: absolute;
+	width: 15%;
+	height: 50%;
+	top: 0%;
+	background-color: #98b0ff;
+	clip-path: ellipse(40% 100% at 50% 100%);
+}
+
+.ear.left {
+	left: 5%;
+	transform: rotate(-15deg);
+}
+
+.ear.right {
+	right: 5%;
+	transform: rotate(15deg);
+}
+
+.eyebrows {
+	position: absolute;
+	width: 30%;
+	height: 5%;
+	top: 25%;
+	background-color: #2b4598;
+}
+
+.eyebrows.left {
+	left: 20%;
+	transform: rotate(5deg);
+	clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
+}
+
+.eyebrows.right {
+	right: 20%;
+	transform: rotate(-5deg);
+	clip-path: polygon(25% 0%, 100% 0, 75% 100%, 0% 100%);
+}
