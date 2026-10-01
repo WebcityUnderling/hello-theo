@@ -12,14 +12,17 @@ body {
 	margin: 0;
 	background: var(--color-background);
 	color: var(--color-text);
-	font-family: var(--font-body);
-	line-height: 1.6;
+	font-family: "Anta", sans-serif;
+	line-height: 1.3;
 }
 
 main {
 	max-width: 960px;
 	margin-inline: auto;
 	padding: 32px 16px;
+
+	display: flex;
+	flex-direction: column;
 }
 
 h1,
@@ -27,16 +30,53 @@ h2,
 h3 {
 	font-family: var(--font-heading);
 	line-height: 1.2;
+	color: var(--color-accent);
+	letter-spacing: 0.05em;
 }
 
 a {
-	color: var(--color-accent);
+	color: var(--color-link);
 }
 
 img {
 	display: block;
 	max-width: 100%;
 	height: auto;
+	border: 10px, #bc591c, outset;
+}
+
+ol li::marker {
+	font-family: var(--font-heading);
+	line-height: 1.2;
+	color: var(--color-accent);
+	letter-spacing: 0.05em;
+}
+
+/* div {
+	display: flex;
+	flex-direction: column;
+} */
+
+/* for sections */
+
+.div1 {
+	display: flex;
+	flex-direction: row;
+}
+
+/* for images */
+
+.div2 {
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+}
+
+/* for side text */
+
+.div3 {
+	padding-right: 0em;
+	padding-left: 3em;
 }
 
 /* TASK 3: Add your section styles, spacing, and layout rules below. */

@@ -3,6 +3,11 @@
 // This area between the --- lines is called frontmatter.
 // Put your image import here after adding a file to src/assets/.
 // See README.md for an image hint if you need one.
+
+import amber from "../assets/amber.jpg";
+import amber2 from "../assets/amber2.jpg";
+import amber3 from "../assets/amber3.jpg";
+import amber4 from "../assets/amber4.jpg";
 ---
 
 <!--
@@ -14,3 +19,39 @@
   This component is already imported and displayed by src/pages/index.astro.
   Save this file and look at the browser to see your changes.
 -->
+<div>
+	<h2>About Me</h2>
+	<p>Hi. My name's Theo. I am 15 years old (about to turn 16), and I live with my parents, sister, and cat (Amber).</p>
+	<p>
+		At school, I study a couple of subjects. I attend The Friends School and am in year 10, and like most other students
+		in my year group, I study 5 core subjects 2 electives, and an extra year 10 class (futures). For four of my core
+		subjects I study: English, Humanities, HPE, and Science Extended. For my Mathematics class, I have actually been
+		accelerated to a course in the TCE, Mathematics Methods 415. My electives are French, and Programming. I have also
+		been in a Computer Graphics class for a semester.
+	</p>
+	<p>
+		I have a couple of interests and hobbies that take up my personal life as well. Most notably, I enjoy playing video
+		games. I mainly play these on my <i> Nintendo Switch 2</i>, and have various mainline Nintendo titles such as
+		<i> Super Mario Odyssey</i>, <i> The Legend of Zelda: Breath of the Wild</i>, and <i> Splatoon 3</i>. I also have a
+		<i> PlayStation 4</i>, which I use occasionally. I like to read often, and I am aiming on developing skills in game
+		development in the near future, as this is what I want to do as a future career.
+	</p>
+
+	<div class="div1">
+		<div class="div2">
+			<img src={amber.src} width="300" height="300" alt="My cat Amber" />
+			<alt>My cat Amber</alt>
+		</div>
+
+		<div class="div2">
+			<img src={amber2.src} width="300" height="300" alt="My cat Amber" />
+			<img src={amber4.src} width="300" height="300" alt="My cat Amber" />
+		</div>
+
+		<div class="div2">
+			<img src={amber3.src} width="300" height="300" alt="My cat Amber" />
+		</div>
+	</div>
+	<br />
+	<br />
+</div>

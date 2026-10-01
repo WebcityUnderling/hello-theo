@@ -1,8 +1,91 @@
 {
-  "example-favourite": {
-    "name": "Example favourite",
-    "reason": "Replace this example with one of your favourites.",
-    "description": "Add more detail about it and what makes it special to you.",
-    "category": "Choose a category"
-  }
+	"Minecraft": {
+		"name": "Minecraft",
+		"reason": "It's a classic, sandbox game that has stood the test of time. There's always something more to do when you come back to it.",
+		"description": "Minecraft is a game made up of blocks, creatures, and community. You can survive the night or build a work of art – the choice is all yours. But if the thought of exploring a vast new world all on your own feels overwhelming, then fear not! Let’s explore what Minecraft is all about! Minecraft has no set goal and can be played however you’d like! This is why it’s sometimes called a “sandbox game” – there are lots of things for you to do, and lots of ways that you can play. If you like being creative, then you can use the blocks to build things from your imagination. If you’re feeling brave, you can explore the world and face daring challenges. Blocks can be broken, crafted, placed to reshape the landscape, or used to build fantastical creations. Creatures can be battled or befriended, depending on how you play. The world of Minecraft allows for epic adventures, quiet meditations, and everything in between. You can even share your creations with other players, or play in community worlds!",
+		"category": "Video game",
+		"image": "/minecraft.png",
+		"image_description": "Photo of Minecraft"
+	},
+
+	"Super Mario Odyssey": {
+		"name": "Super Mario Odyssey",
+		"reason": "It's a great game to speedrun due to its fluid movement, and open nature.",
+		"description": "Super Mario Odyssey is a 3D action-adventure platformer for the Nintendo Switch. Unique to this game, Mario is able to throw Cappy onto certain enemies and objects, allowing Mario to take control of them and use their abilities. Mario can also dress in different costumes, several being based on the previous games. The game supports two-player co-op, allowing a second player to use a single Joy-Con or Pro Controller to control Cappy independently from Mario. The game also has online functionality, which allows players to compare their times/scores in certain events. In addition, amiibo can be used to unlock certain costumes early as well as obtain free hints toward the locations of Power Moons and regional coins.",
+		"category": "Video game",
+		"image": "/mario.png",
+		"image_description": "Photo of Super Mario Odyssey"
+	},
+
+	"The Legend of Zelda: Breath of the Wild": {
+		"name": "The Legend of Zelda: Breath of the Wild",
+		"reason": "It has a vast open world with so much to do and so much to see. It has a great combat system, and a calming nature.",
+		"description": "Breath of the Wild features a vast open world for Link to explore. Most of Hyrule Kingdom's scenery is accessible by walking, paragliding or climbing. While the game still includes barriers (such as weather effects, inhospitable environments or strong enemies), many of these can be overcome by using Food, effective weapons and armor or finding alternate routes. The world also includes an elaborate physics system which allows for creative interactions (e.g., cutting down a tree and using its trunk as a raft on a river, or setting grass ablaze and spreading the fire with wind gusts). Unlike many previous Zelda games, Breath of the Wild does not enforce a specific order in which quests or dungeons have to be solved, with the exception of completing the starting tasks on the Great Plateau. It is possible to challenge Ganon right after leaving the starting area, though the game does encourage exploration in order to solve Ancient Shrines (and thus gaining additional Hearts or Stamina), find useful and powerful equipment, and defeat the game's own version of dungeons, the Divine Beasts. Additionally, many of the game's puzzles can also be solved in various different ways, often rewarding Link for creative solutions.",
+		"category": "Video game",
+		"image": "/breath.png",
+		"image_description": "Photo of Breath of the Wild"
+	},
+
+	"Animal Crossing New Horizons": {
+		"name": "Animal Crossing New Horizons",
+		"reason": "It's delightfully relaxing, and it works well to make menial labour feel invigorating.",
+		"description": "In New Horizons, the player takes on the opportunity to develop a deserted island, offered by Tom Nook as part of Nook Inc.'s Getaway Package. Initially, the deserted island is almost fully empty, only occupied by several tents (occupied by the player and 2 villagers). The player completes tasks to develop the island into a flourishing town of villagers, and makes use of the crafting item system to achieve the creation of various tools and furniture. Like previous games, the game makes use of bells as the primary currency, with some limited secondary currencies such as Nook Miles for some limited transactions and upgrades for the player's NookPhone which Tom Nook gives them after they sleep at the tent, along with a bill for moving in.",
+		"category": "Video game",
+		"image": "/animal.png",
+		"image_description": "Photo of Animal Crossing New Horizons"
+	},
+
+	"Mario + Rabbids: Kingdom Battle": {
+		"name": "Mario + Rabbids: Kingdom Battle",
+		"reason": "Suprisingly underrated. It's a brilliant test of strategy and skill, and it has quite an in depth and complex system of characters, skills, and weapons.",
+		"description": "Mario + Rabbids Kingdom Battle is a role-playing video game featuring turn-based combat and elements of exploration. The game features eight playable characters: Mario, Luigi, Princess Peach, and Yoshi from the Mario franchise, and four Rabbids dressed as the former. The characters wield guns that shoot laser beams. The game features two-player local cooperative play. The characters have the capability of attacking through dashing, firing through weapons and by using team jump (an ability in which one character boosts another to reach further ground than capable). They can defend by entering either full or half cover. Each character has a special skill. While traveling to Princess Peach's castle, Mario discovers a giant vortex floating above him. Soon after this discovery, Rabbids begin flying out of it. To restore the Mushroom Kingdom, which has been 'torn apart' by the mischievous Rabbids, Mario teams up with Luigi, Princess Peach, Yoshi, and four heroic Rabbids that are dressed up as Mario and his friends to defeat their enemies while armed with various weapons. They are aided by Beep-O, a rabbid roomba-like robot that serves as their instructor.",
+		"category": "Video game",
+		"image": "/kingdom.png",
+		"image_description": "Photo of Mario + Rabbids: Kingdom Battle"
+	},
+
+	"The Legend of Zelda: Tears of the Kingdom": {
+		"name": "The Legend of Zelda: Tears of the Kingdom",
+		"reason": "It has a pretty cool storyline, and is filled to the brim with quests, items, challenges, and more, resulting in a game you can always do more in.",
+		"description": "The Legend of Zelda: Tears of the Kingdom is an open-world action-adventure game where Link explores the surface of Hyrule, floating sky islands, and a massive underground Depths. The gameplay of Tears of the Kingdom is similar to its predecessor. Additions include rail grinding and mechanical automations that Link can build using the Ultrahand ability, including a car, hot-air balloon, boats, and numerous other things. Link can use the Fuse ability to fuse weapons with objects to make them stronger, he can also fuse things to his shield and arrows. In the March 28, 2023 gameplay, Eiji Aonuma showed off four new runes: Recall, Fuse, Ultrahand, and Ascend.",
+		"category": "Video game",
+		"image": "/tears.png",
+		"image_description": "Photo of Tears of the Kingdom"
+	},
+
+	"Stardew Valley": {
+		"name": "Stardew Valley",
+		"reason": "It has an incredibly charming nature, and a great abundance of things to do. It also turns you into a multi-million dollar wine manufacturer.",
+		"description": "You’ve inherited your grandfather’s old farm plot in Stardew Valley. Armed with hand-me-down tools and a few coins, you set out to begin your new life. Can you learn to live off the land and turn these overgrown fields into a thriving home? It won’t be easy. Ever since Joja Corporation came to town, the old ways of life have all but disappeared. The community center, once the town’s most vibrant hub of activity, now lies in shambles. But the valley seems full of opportunity. With a little dedication, you might just be the one to restore Stardew Valley to greatness! The game begins with the player tending to their grandfather, who is currently on his deathbed. He hands them a sealed envelope. He tells the player when the player is crushed by the burden of modern life then the player should open the envelope. Sometime later, after the grandfather's passing, the player is seen working at their cubicle inside JojaCorp, a mega enterprise, and is seemingly frustrated with the dull lifestyle they live. Remembering the words of their grandfather, the player reaches into their desk to open the envelope. Inside, there's a message from the grandfather as well as a bus pass to Stardew Valley. The player arrives at the valley and heads towards the farm their grandfather owned. After seeing the farm overgrown with trees, stones, and logs, the player sets out to start their new life, in memory of their grandfather.",
+		"category": "Video game",
+		"image": "/stardew.png",
+		"image_description": "Photo of Stardew Valley"
+	},
+
+	"Super Smash Bros. Ultimate": {
+		"name": "Super Smash Bros. Ultimate",
+		"reason": "It's a really easy game to pick up and play, with many challenges, modes, and playstyles. It's really fun to get good at",
+		"description": "Super Smash Bros. Ultimate, abbreviated as SSBU and titled Great Fray Smash Bros. Special in Japan, is a crossover platform fighting game developed by Bandai Namco Studios & Sora Ltd., and published by Nintendo for the Nintendo Switch. It is the sixth overall entry in Nintendo's Super Smash Bros. series following the dual-release of Super Smash Bros. for Nintendo 3DS / Wii U (2014). As with previous entries, the gameplay entails selecting a fighter from a roster comprising various characters from both Nintendo and third-party properties, and battling opponents with attacks of varying attributes, in an attempt to knock said opponents off of an arena. The game features a roster of 89 total playable characters, including every single prior fighter from past Super Smash Bros. games, in addition to 11 newcomers in the starting roster, and 12 additional characters released as paid downloadable content (DLC). The game released worldwide on December 7, 2018.",
+		"category": "Video game",
+		"image": "/smash.png",
+		"image_description": "Photo of Super Smash Bros. Ultimate"
+	},
+
+	"Splatoon 3": {
+		"name": "Splatoon 3",
+		"reason": "It's full of gameplay that either makes you feel like a pro, or like you're havign the worst day of your life. The music is great at helping this.",
+		"description": "Like its predecessors, Splatoon 3 is a third-person shooter game focused on online multiplayer ink battles, in which eight players are divided into two teams of four. Players have two main forms and may switch between the two at will: their humanoid form, in which they can use weapons to spread ink and splat opponents, and their swim form - with a squid or octopus appearance, which, if they enter their team's ink while in the form, allows them to swim through ink at greater speeds, including up walls, recharge their ink tank faster, and hide from opponents. Players have access to new movement techniques to dodge attacks and expand the possibilities of attacks. A Squid Roll allows them to leap and twirl out of their ink and a Squid Surge allows them to quickly swim up ink-covered walls and jump out at the top, and both have a short phase of invincibility. Additionally, medals are now awarded at the end of multiplayer matches for various accomplishments, such as inking the most and getting the most splats.",
+		"category": "Video game",
+		"image": "/splatoon.png",
+		"image_description": "Photo of Splatoon 3"
+	},
+
+	"Hollow Knight: Silksong": {
+		"name": "Hollow Knight: Silksong",
+		"reason": "Incredibly intricate gameplay, storyline, and worldbuilding that introduces difficulty and a love for what games are truly about.",
+		"description": "Play as Hornet, princess-protector of Hallownest, and adventure through a whole new kingdom ruled by silk and song! Captured and brought to this unfamiliar world, Hornet must battle foes and solve mysteries as she ascends on a deadly pilgrimage to the kingdom’s peak. The lethal hunter Hornet finds herself alone in a vast, unfamiliar kingdom. She must battle foes, seek out allies, and solve mysteries as she ascends on a deadly pilgrimage to the kingdom’s peak. Bound by her lineage and guided by echoes of her past, Hornet will adventure through mossy grottos, coral forests and shining citadels to unravel a deadly thread that threatens this strange new land. Hornet must master a whole new suite of powerful moves to survive. She'll unleash devastating attacks, learn incredible silken abilities, and craft deadly tools in order to overcome the kingdom's challenges. Over 200 ferocious foes stand between Hornet and the shining citadel crowning the kingdom. Beasts and hunters, assassins and kings, monsters and knights - Hornet must face them all with bravery and skill!",
+		"category": "Video game",
+		"image": "/silksong.png",
+		"image_description": "Photo of Hollow Knight: Silksong"
+	}
 }

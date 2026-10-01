@@ -8,12 +8,12 @@ You do not need to memorise everything here. Read the first sections, then retur
 
 Run `npm run dev` in the terminal, then open the address it prints and visit `/virtual-pet`. Keep the terminal running while you work.
 
-| File | What you use it for |
-| --- | --- |
-| [virtual-pet.astro](../src/pages/virtual-pet.astro) | Your HTML, JavaScript, and task list |
-| [virtual-pet.css](../src/styles/virtual-pet.css) | Finished page styles, action animations, and game-over fade |
-| [Creature.astro](../src/components/Creature.astro) | Your own character |
-| [CreatureExample.astro](../src/components/CreatureExample.astro) | The example character used to start with |
+| File                                                             | What you use it for                                         |
+| ---------------------------------------------------------------- | ----------------------------------------------------------- |
+| [virtual-pet.astro](../src/pages/virtual-pet.astro)              | Your HTML, JavaScript, and task list                        |
+| [virtual-pet.css](../src/styles/virtual-pet.css)                 | Finished page styles, action animations, and game-over fade |
+| [Creature.astro](../src/components/Creature.astro)               | Your own character                                          |
+| [CreatureExample.astro](../src/components/CreatureExample.astro) | The example character used to start with                    |
 
 Try Feed several times. Happiness begins at 5 and stops at 10. Play currently shows an animation without changing happiness. Rest is waiting for your code. The timer and game-over behaviour are also tasks, so the starter does not lose happiness yet.
 
@@ -84,11 +84,11 @@ const happinessDisplay = document.querySelector("#happiness-value");
 
 `querySelector` finds the first element matching a CSS selector. Put the selector inside quotes.
 
-| Selector | Finds |
-| --- | --- |
-| `"#feed-button"` | The element with `id="feed-button"` |
+| Selector          | Finds                                       |
+| ----------------- | ------------------------------------------- |
+| `"#feed-button"`  | The element with `id="feed-button"`         |
 | `".pet-creature"` | The first element with class `pet-creature` |
-| `"button"` | The first button on the page |
+| `"button"`        | The first button on the page                |
 
 An ID should identify one element on the page. Class names can be shared by several elements.
 
@@ -102,7 +102,7 @@ A function gives a name to a group of instructions:
 
 ```js
 function sayHello() {
-    console.log("Hello!");
+	console.log("Hello!");
 }
 ```
 
@@ -154,24 +154,24 @@ An `if` statement runs a block only when its condition is true. Here is an unrel
 let tickets = 3;
 
 if (tickets > 0) {
-    console.log("You can enter.");
+	console.log("You can enter.");
 } else {
-    console.log("No tickets left.");
+	console.log("No tickets left.");
 }
 ```
 
 The optional `else` block runs when the condition is false.
 
-| Operator | Meaning |
-| --- | --- |
-| `===` | Equals, with the same type of value |
-| `!==` | Does not equal, including a different type |
-| `<` | Less than |
-| `>` | Greater than |
-| `<=` | Less than or equal to |
-| `>=` | Greater than or equal to |
-| `||` | Or: at least one condition is true |
-| `&&` | And: both conditions are true |
+| Operator | Meaning                                    |
+| -------- | ------------------------------------------ |
+| `===`    | Equals, with the same type of value        |
+| `!==`    | Does not equal, including a different type |
+| `<`      | Less than                                  |
+| `>`      | Greater than                               |
+| `<=`     | Less than or equal to                      |
+| `>=`     | Greater than or equal to                   |
+| `        |                                            | `   | Or: at least one condition is true |
+| `&&`     | And: both conditions are true              |
 
 Use `===` to compare. A single `=` assigns a value instead.
 
@@ -185,8 +185,8 @@ Changing `happiness` changes a JavaScript value. It does not automatically chang
 
 ```js
 function updatePet() {
-    happinessDisplay.textContent = String(happiness);
-    statusDisplay.textContent = statusMessage;
+	happinessDisplay.textContent = String(happiness);
+	statusDisplay.textContent = statusMessage;
 }
 ```
 
@@ -202,11 +202,11 @@ The status paragraph is a polite live region. Updating its text lets assistive t
 
 The helper accepts a **parameter**: a named input to a function. In `animatePet(animationClass)`, `animationClass` receives the string supplied when you call it.
 
-| Call | Effect |
-| --- | --- |
+| Call                       | Effect                  |
+| -------------------------- | ----------------------- |
 | `animatePet("is-feeding")` | A short munching squash |
-| `animatePet("is-playing")` | A hop and wiggle |
-| `animatePet("is-resting")` | Slow breathing |
+| `animatePet("is-playing")` | A hop and wiggle        |
+| `animatePet("is-resting")` | Slow breathing          |
 
 Feed and Play already call this helper. Add the Rest call inside your Rest function.
 
@@ -242,7 +242,7 @@ This independent example prints a message every five seconds:
 
 ```js
 function reportTime() {
-    console.log("Another five seconds have passed.");
+	console.log("Another five seconds have passed.");
 }
 
 const reminderTimer = setInterval(reportTime, 5000);
@@ -276,11 +276,11 @@ A `return` statement exits a function immediately. Here is an unrelated example 
 
 ```js
 function openDoor() {
-    if (doorLocked) {
-        return;
-    }
+	if (doorLocked) {
+		return;
+	}
 
-    console.log("Opening the door.");
+	console.log("Opening the door.");
 }
 ```
 
@@ -330,18 +330,18 @@ console.log("Happiness is", happiness);
 
 Place it inside an action to see the value each time the action runs. Remove debugging messages once you understand the behaviour.
 
-| Symptom | Check |
-| --- | --- |
-| Nothing responds after an edit | Look for a missing quote, parenthesis, or closing brace in the console |
-| “Cannot read properties of null” | Does the selector match the HTML ID or class exactly? |
-| “... is not defined” | Check spelling and whether the variable is declared where the function can access it |
-| “Identifier ... has already been declared” | Did you paste a second `const` or `let` for an existing name? |
-| A function runs on page load instead of on click | Did you accidentally put `()` after its name in the listener? |
-| The number changes in the console but not on screen | Call `updatePet()` after changing the variables |
-| Happiness becomes 11 | Check the limit after adding 2, especially when starting at 9 |
-| Decay gets faster after clicks or resets | Check for more than one running interval |
-| Game-over text gets replaced | Check for an early return before care functions change the message |
-| Animation does not play | Check the class name and whether reduced motion or game over is active |
+| Symptom                                             | Check                                                                                |
+| --------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Nothing responds after an edit                      | Look for a missing quote, parenthesis, or closing brace in the console               |
+| “Cannot read properties of null”                    | Does the selector match the HTML ID or class exactly?                                |
+| “... is not defined”                                | Check spelling and whether the variable is declared where the function can access it |
+| “Identifier ... has already been declared”          | Did you paste a second `const` or `let` for an existing name?                        |
+| A function runs on page load instead of on click    | Did you accidentally put `()` after its name in the listener?                        |
+| The number changes in the console but not on screen | Call `updatePet()` after changing the variables                                      |
+| Happiness becomes 11                                | Check the limit after adding 2, especially when starting at 9                        |
+| Decay gets faster after clicks or resets            | Check for more than one running interval                                             |
+| Game-over text gets replaced                        | Check for an early return before care functions change the message                   |
+| Animation does not play                             | Check the class name and whether reduced motion or game over is active               |
 
 When stuck, reduce the problem: make one button log one message, confirm it works, then add one step at a time. Ask your mentor to look at the smallest part you cannot explain.
 

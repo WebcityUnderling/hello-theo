@@ -84,12 +84,15 @@ Your saved code stays in the project folder. The pet’s game values reset when 
 
 Run `npm run build` to check that the project builds. To view that built version, run `npm run preview` and open the address it prints. For normal editing, use `npm run dev`.
 
-| Problem | Try this |
-| --- | --- |
-| `node` or `npm` is not recognised | Restart your terminal and editor. If needed, rerun the Node installer. |
-| npm cannot find `package.json` | Open the terminal in the project folder, not its parent or the `src` folder. |
+| Problem                                      | Try this                                                                                |
+| -------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `node` or `npm` is not recognised            | Restart your terminal and editor. If needed, rerun the Node installer.                  |
+| npm cannot find `package.json`               | Open the terminal in the project folder, not its parent or the `src` folder.            |
 | Windows PowerShell says `npm.ps1` cannot run | Use a Command Prompt terminal, or type `npm.cmd install` and `npm.cmd run dev` instead. |
-| The browser cannot connect | Check that `npm run dev` is still running and use the exact address it printed. |
-| A change does not appear | Save the file, check the terminal for errors, and refresh the browser. |
+| The browser cannot connect                   | Check that `npm run dev` is still running and use the exact address it printed.         |
+| A change does not appear                     | Save the file, check the terminal for errors, and refresh the browser.                  |
 
-Continue with the [CSS creature guide](create-a-creature.md) and [Virtual Pet JavaScript guide](virtual-pet-javascript.md). If something goes wrong, copy the full error message so your mentor can help.
+Continue with the [CSS creature guide](create-a-creature.md) and [Virtual Pet JavaScript guide](virtual-pet-javascript.md). If something goes wrong, copy the full error message and paste into Google. There are tons of helpful websites to learn Javescript, HTML and CSS. And to help with errors.
+
+- [StackOverflow - find help with errors](https://stackoverflow.com/). If you are seeing an error, chances are someone else has had the same problem!
+- [MDN Web Docs](https://developer.mozilla.org/en-US/) Look through all the different HTML, CSS and Javacript features

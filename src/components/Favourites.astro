@@ -11,6 +11,8 @@
 // LATER, TASK 4: Move your data to src/data/favourites.json and import it here.
 // Replace your local object with the shared data and link each name to its page.
 // See README.md for the new data shape and a link hint.
+
+import favourites from "../data/favourites.json";
 ---
 
 <!--
@@ -23,3 +25,18 @@
   This generates HTML at build time; no browser script is needed yet.
   See README.md for a smaller example if you get stuck.
 -->
+
+<div>
+	<h2>My Top 10 Favourite Games</h2>
+	<p>(In the order I obtained and first played them)</p>
+
+	<ol>
+		{Object.entries(favourites).map(([slug, favourite], index) => (
+			<li value={index + 1}>
+				<h3>{favourite.name}</h3>
+				<p>{favourite.reason}</p>
+				<a href={`/favourites/${slug}/`}>More about {favourite.name}</a>
+			</li>
+		))}
+	</ol>
+</div>
