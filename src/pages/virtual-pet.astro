@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 // To use your own character, change only this path to "../components/Creature.astro".
-import PetCreature from "../components/CreatureExample.astro";
+import PetCreature from "../components/Creature.astro";
 
 // Start with the tasks on the page, then find the browser JavaScript below.
 // Beginner JavaScript guide: docs/virtual-pet-javascript.md
@@ -9,149 +9,299 @@ import PetCreature from "../components/CreatureExample.astro";
 ---
 
 <BaseLayout title="Virtual Pet" description="Learn JavaScript by caring for your own virtual pet.">
-    <div class="virtual-pet-project">
-        <a href="/">Back to home</a>
-        <header>
-            <h1>Virtual Pet</h1>
-            <p>Give your pet a personality and learn how JavaScript makes a page respond.</p>
-            <p class="pet-learning-goal">Click a button → run a function → change a variable → update the page.</p>
-        </header>
+	<div class="virtual-pet-project">
+		<a href="/">Back to home</a>
+		<header>
+			<h1>Virtual Pet</h1>
+			<p>Give your pet a personality and learn how JavaScript makes a page respond.</p>
+			<p class="pet-learning-goal">Click a button → run a function → change a variable → update the page.</p>
+		</header>
 
-        <section class="pet-card" aria-labelledby="pet-name">
-            <!-- The wrapper sizes either creature to fit the pet card. -->
-            <div class="creature-bounds pet-creature" aria-hidden="true">
-                <PetCreature />
-            </div>
-            <!-- Change your pet's name here. -->
-            <h2 id="pet-name">Barnacle</h2>
-            <p class="pet-happiness">Happiness: <span id="happiness-value">5</span> / 10</p>
-            <p id="pet-status" role="status" aria-live="polite" aria-atomic="true">Ready for a snack and some company.</p>
+		<section class="pet-card" aria-labelledby="pet-name">
+			<!-- The wrapper sizes either creature to fit the pet card. -->
+			<div class="creature-bounds pet-creature" aria-hidden="true">
+				<PetCreature />
+			</div>
+			<!-- Change your pet's name here. -->
+			<h2 id="pet-name">Bernard</h2>
+			<p class="pet-happiness">
+				Happiness: <span id="happiness-value">5</span> / 10
+			</p>
+			<p class="pet-energy">
+				Energy: <span id="energy-value">10</span> / 50
+			</p>
+			<p id="pet-status" role="status" aria-live="polite" aria-atomic="true">
+				Ready for a snack and some company.
+			</p>
 
-            <div class="pet-actions">
-                <button id="feed-button" type="button">Feed</button>
-                <button id="play-button" type="button" aria-describedby="unfinished-note">Play <small>Student task</small></button>
-                <button id="rest-button" type="button" aria-describedby="unfinished-note">Rest <small>Student task</small></button>
-            </div>
-            <p id="unfinished-note">Feed works already. Play previews an animation; its happiness changes and the Rest action are your tasks.</p>
-        </section>
+			<div class="pet-actions">
+				<button id="feed-button" type="button">
+					Feed
+				</button>
+				<button id="play-button" type="button" aria-describedby="unfinished-note">
+					Play <small>Student task</small>
+				</button>
+				<button id="rest-button" type="button" aria-describedby="unfinished-note">
+					Rest <small>Student task</small>
+				</button>
+			</div>
+			<p id="unfinished-note">
+				Feed works already. Play previews an animation; its happiness changes and the Rest action are your tasks.
+			</p>
+		</section>
 
-        <section class="pet-tasks" aria-labelledby="tasks-heading">
-            <h2 id="tasks-heading">Your tasks</h2>
-            <p>Need help with JavaScript? Open <code>docs/virtual-pet-javascript.md</code> in your editor for explanations, examples, and debugging tips.</p>
-            <ol>
-                <li>Try the Feed button.</li>
-                <li>Find its function and event listener in the code.</li>
-                <li>Change the pet’s name and feeding message, then swap in your own creature.</li>
-                <li>Make Play increase happiness by 2 and show a different message.</li>
-                <li>Make Rest show a resting message without changing happiness.</li>
-                <li>Ensure Play cannot increase happiness above 10.</li>
-                <li>Add a timer with <code>setInterval</code> that lowers happiness by 1 every 5 seconds and updates the page.</li>
-                <li>When happiness reaches 0, end the game: stop the timer, show a game-over message, disable the care buttons, and fade out the creature.</li>
-            </ol>
-            <p>Open <code>src/pages/virtual-pet.astro</code>. Change the name in the HTML, then find the <code>&lt;script&gt;</code> below it for the JavaScript. Choose your own messages and personality for your pet.</p>
-            <p>Start with the example character. When your own design is ready, change the <code>PetCreature</code> import path at the top of this file from <code>../components/CreatureExample.astro</code> to <code>../components/Creature.astro</code>. Keep <code>&lt;PetCreature /&gt;</code> in place—the wrapper will size your character to fit.</p>
-            <p>Test one change at a time. Try Play when happiness is 9, and check that Rest leaves the number unchanged.</p>
+		<section class="pet-tasks" aria-labelledby="tasks-heading">
+			<h2 id="tasks-heading">Your tasks</h2>
+			<p>
+				Need help with JavaScript? Open <code>docs/virtual-pet-javascript.md</code> in your editor for explanations,
+				examples, and debugging tips.
+			</p>
+			<ol>
+				<li>Try the Feed button.</li>
+				<li>Find its function and event listener in the code.</li>
+				<li>Change the pet’s name and feeding message, then swap in your own creature.</li>
+				<li>Make Play increase happiness by 2 and show a different message.</li>
+				<li>Make Rest show a resting message without changing happiness.</li>
+				<li>Ensure Play cannot increase happiness above 10.</li>
+				<li>
+					Add a timer with <code>setInterval</code> that lowers happiness by 1 every 5 seconds and updates the page.
+				</li>
+				<li>
+					When happiness reaches 0, end the game: stop the timer, show a game-over message, disable the care buttons,
+					and fade out the creature.
+				</li>
+			</ol>
+			<p>
+				Open <code>src/pages/virtual-pet.astro</code>. Change the name in the HTML, then find the{" "}
+				<code>&lt;script&gt;</code> below it for the JavaScript. Choose your own messages and personality for your pet.
+			</p>
+			<p>
+				Start with the example character. When your own design is ready, change the <code>PetCreature</code> import path
+				at the top of this file from <code>../components/CreatureExample.astro</code> to{" "}
+				<code>../components/Creature.astro</code>. Keep <code>&lt;PetCreature /&gt;</code> in place—the wrapper will
+				size your character to fit.
+			</p>
+			<p>Test one change at a time. Try Play when happiness is 9, and check that Rest leaves the number unchanged.</p>
 
-            <h3>Ready-made animations</h3>
-            <p>Feed gives the creature a little munching squash, Play makes it hop and wiggle, and Rest gives it a slow breathing motion. Feed and Play are connected already. The animations only change how the creature looks.</p>
-            <p>Use <code>animatePet("is-resting")</code> inside your Rest function. The other choices are <code>animatePet("is-feeding")</code> and <code>animatePet("is-playing")</code>. Each helper call adds a CSS class, plays its animation once, and can be repeated. Add your Play logic to the existing <code>playPet()</code> function.</p>
+			<h3>Ready-made animations</h3>
+			<p>
+				Feed gives the creature a little munching squash, Play makes it hop and wiggle, and Rest gives it a slow
+				breathing motion. Feed and Play are connected already. The animations only change how the creature looks.
+			</p>
+			<p>
+				Use <code>animatePet("is-resting")</code> inside your Rest function. The other choices are{" "}
+				<code>animatePet("is-feeding")</code> and <code>animatePet("is-playing")</code>. Each helper call adds a CSS
+				class, plays its animation once, and can be repeated. Add your Play logic to the existing <code>playPet()</code>{" "}
+				function.
+			</p>
 
-            <h3>Make it a survival game</h3>
-            <p>The timer is your task to build. <code>setInterval</code> repeats a function after a delay measured in milliseconds: 5000 means 5 seconds. Start one timer when the page loads and save its ID so you can stop it with <code>clearInterval</code>. Don’t start a new timer on every button click.</p>
-            <p>Keep happiness between 0 and 10. After each change, check whether the game is over, then call <code>updatePet()</code>. Use a variable to remember that the game has ended so button functions cannot change the values or replace the game-over message.</p>
-            <p>The fade CSS is ready: select <code>.pet-creature</code> and use <code>classList.add</code> to add the class <code>is-game-over</code>. Set each care button’s <code>disabled</code> property to <code>true</code>. Leave the final happiness and message visible.</p>
-            <p>Test by waiting without feeding: happiness should reach 0, stay there, and the creature should fade out. The buttons should stop working. Refresh the page to start again.</p>
+			<h3>Make it a survival game</h3>
+			<p>
+				The timer is your task to build. <code>setInterval</code> repeats a function after a delay measured in
+				milliseconds: 5000 means 5 seconds. Start one timer when the page loads and save its ID so you can stop it with{" "}
+				<code>clearInterval</code>. Don’t start a new timer on every button click.
+			</p>
+			<p>
+				Keep happiness between 0 and 10. After each change, check whether the game is over, then call{" "}
+				<code>updatePet()</code>. Use a variable to remember that the game has ended so button functions cannot change
+				the values or replace the game-over message.
+			</p>
+			<p>
+				The fade CSS is ready: select <code>.pet-creature</code> and use <code>classList.add</code> to add the class{" "}
+				<code>is-game-over</code>. Set each care button’s <code>disabled</code> property to <code>true</code>. Leave the
+				final happiness and message visible.
+			</p>
+			<p>
+				Test by waiting without feeding: happiness should reach 0, stay there, and the creature should fade out. The
+				buttons should stop working. Refresh the page to start again.
+			</p>
 
-            <h3>Optional challenges</h3>
-            <ul>
-                <li>Change the creature’s colour or expression depending on its happiness.</li>
-                <li>Add an energy variable: playing uses energy and resting restores it. Lower energy in your existing timer too. When any implemented attribute reaches 0, end the game—even if a button caused it.</li>
-                <li>Prevent playing when energy is too low, with a helpful message.</li>
-                <li>Add a reset button to restore the starting values, show the creature, and enable the care buttons. Stop the old timer before starting one new timer.</li>
-            </ul>
-        </section>
-    </div>
+			<h3>Optional challenges</h3>
+			<ul>
+				<li>Change the creature’s colour or expression depending on its happiness.</li>
+				<li>
+					Add an energy variable: playing uses energy and resting restores it. Lower energy in your existing timer too.
+					When any implemented attribute reaches 0, end the game—even if a button caused it.
+				</li>
+				<li>Prevent playing when energy is too low, with a helpful message.</li>
+				<li>
+					Add a reset button to restore the starting values, show the creature, and enable the care buttons. Stop the
+					old timer before starting one new timer.
+				</li>
+			</ul>
+		</section>
+	</div>
 </BaseLayout>
 
 <script>
-    // This script runs in the browser, where it can respond to button clicks.
-    // Select HTML elements by their IDs so we can read or change them in JavaScript.
-    const happinessDisplay = document.querySelector("#happiness-value");
-    const statusDisplay = document.querySelector("#pet-status");
-    const feedButton = document.querySelector("#feed-button");
-    const playButton = document.querySelector("#play-button");
-    const petCreature = document.querySelector(".pet-creature");
+	// @ts-nocheck
+	// This script runs in the browser, where it can respond to button clicks.
+	// Select HTML elements by their IDs so we can read or change them in JavaScript.
+	const happinessDisplay = document.querySelector("#happiness-value");
+	const energyDisplay = document.querySelector("#energy-value");
+	const statusDisplay = document.querySelector("#pet-status");
+	const feedButton = document.querySelector("#feed-button");
+	const playButton = document.querySelector("#play-button");
+	const restButton = document.querySelector("#rest-button");
+	const petCreature = document.querySelector(".pet-creature");
 
-    // Ready-made visual helper: restart the animation even after a quick repeat click.
-    function animatePet(animationClass) {
-        if (petCreature.classList.contains("is-game-over")) return;
-        petCreature.classList.remove("is-feeding", "is-playing", "is-resting");
-        // Let the browser notice the removed class before adding it again.
-        petCreature.getBoundingClientRect();
-        petCreature.classList.add(animationClass);
-    }
+	const reminderTimer = setInterval(decayPet, 10000);
 
-    petCreature.addEventListener("animationend", (event) => {
-        // Ignore animations on features inside the creature.
-        if (event.target !== petCreature) return;
-        petCreature.classList.remove("is-feeding", "is-playing", "is-resting");
-    });
+	let gameEnd = false;
 
-    // `let` lets us change these values as the pet is cared for.
-    let happiness = 5;
-    let statusMessage = "Ready for a snack and some company.";
+	// Ready-made visual helper: restart the animation even after a quick repeat click.
+	function animatePet(animationClass) {
+		if (petCreature.classList.contains("is-game-over")) return;
+		petCreature.classList.remove("is-feeding", "is-playing", "is-resting");
+		// Let the browser notice the removed class before adding it again.
+		petCreature.getBoundingClientRect();
+		petCreature.classList.add(animationClass);
+	}
 
-    function updatePet() {
-        // Changing a variable does not change the HTML automatically.
-        // textContent puts our latest values into the page as text.
-        happinessDisplay.textContent = String(happiness);
-        statusDisplay.textContent = statusMessage;
-    }
+	petCreature.addEventListener("animationend", (event) => {
+		// Ignore animations on features inside the creature.
+		if (event.target !== petCreature) return;
+		petCreature.classList.remove("is-feeding", "is-playing", "is-resting");
+	});
 
-    function feedPet() {
-        animatePet("is-feeding");
-        if (happiness < 10) {
-            happiness = happiness + 1;
-            statusMessage = "Yum! That snack made my day.";
-        }
+	// `let` lets us change these values as the pet is cared for.
+	let happiness = 5;
+	let energy = 10;
+	let statusMessage = "Ready for a snack and some company.";
 
-        if (happiness === 10) {
-            statusMessage = "I’m already happy at 10 out of 10. Thanks for caring for me!";
-        }
+	function updatePet() {
+		// Changing a variable does not change the HTML automatically.
+		// textContent puts our latest values into the page as text.
+		happinessDisplay.textContent = String(happiness);
+		energyDisplay.textContent = String(energy);
+		statusDisplay.textContent = statusMessage;
 
-        updatePet();
-    }
+		if (gameEnd === true) {
+			animatePet("is-game-over");
+			statusMessage = "Bernard did not receive enough care.";
+			updatePet();
+		}
+	}
 
-    // An event listener runs our named function when the button is clicked.
-    feedButton.addEventListener("click", feedPet);
+	function feedPet() {
+		if (happiness === 0 || energy === 0) {
+			gameEnd = true;
+			updatePet();
+			return;
+		}
 
-    function playPet() {
-        animatePet("is-playing");
-        // TODO: Increase happiness by 2, choose a message, and call updatePet().
-        // Make sure happiness cannot go above 10, even when it starts at 9.
-    }
+		animatePet("is-feeding");
+		if (happiness < 10) {
+			happiness += 1;
+			statusMessage = "Yum! That snack was delicious!";
+		}
 
-    playButton.addEventListener("click", playPet);
+		if (happiness === 0 || energy === 0) {
+			gameEnd = true;
+			updatePet();
+		}
 
-    // TODO: Rest
-    // Select #rest-button, write a named function, and attach a click listener.
-    // Change the message without changing happiness, then call updatePet().
-    // Call animatePet("is-resting") to use the ready-made breathing animation.
+		energy = Math.min(energy + 5, 50);
 
-    // TODO: Decay over time
-    // Write a named function that lowers happiness by 1 without going below 0.
-    // Use setInterval to run it every 5000 milliseconds; save the timer ID.
-    // Start the timer once, not inside updatePet() or a button function.
-    // Check for game over after changing a value, then update the page.
-    // If you add energy or other attributes, lower them in this same timer.
+		if (happiness === 10 && energy === 50) {
+			statusMessage = "I’m full now. Thanks for caring for me!";
+		}
 
-    // TODO: Game over
-    // Track whether the game has ended with a variable.
-    // Check after timer AND button changes: any implemented attribute at 0 ends it.
-    // Use clearInterval to stop the timer and set a game-over status message.
-    // Add is-game-over to .pet-creature to use the fade styling.
-    // Disable the care buttons and prevent their functions changing an ended game.
+		updatePet();
+	}
 
-    // Show the starting values when the page first loads.
-    updatePet();
+	// An event listener runs our named function when the button is clicked.
+	feedButton.addEventListener("click", feedPet);
+
+	function playPet() {
+		if (happiness === 0 || energy === 0) {
+			gameEnd = true;
+			updatePet();
+			return;
+		}
+
+		animatePet("is-playing");
+		if (happiness < 9) {
+			happiness += 2;
+			statusMessage = "Yay! That was so fun!";
+		} else if (happiness === 9) {
+			happiness += 1;
+			statusMessage = "Yay! That was so fun!";
+		}
+
+		if (happiness === 10) {
+			statusMessage = "I'm really tired now. Thanks for playing with me!";
+		}
+
+		if (happiness > 10) {
+			statusMessage = "How did you do that?";
+		}
+
+		if (happiness === 0 || energy === 0) {
+			gameEnd = true;
+			updatePet();
+		}
+
+		updatePet();
+		// TODO: Increase happiness by 2, choose a message, and call updatePet().
+		// Make sure happiness cannot go above 10, even when it starts at 9.
+	}
+
+	playButton.addEventListener("click", playPet);
+
+	function restPet() {
+		if (happiness === 0 || energy === 0) {
+			gameEnd = true;
+			updatePet();
+			return;
+		}
+
+		animatePet("is-resting");
+		statusMessage = "*sigh* That's better.";
+
+		if (happiness === 0 || energy === 0) {
+			gameEnd = true;
+			updatePet();
+		}
+
+		updatePet();
+	}
+
+	restButton.addEventListener("click", restPet);
+
+	// TODO: Rest
+	// Select #rest-button, write a named function, and attach a click listener.
+	// Change the message without changing happiness, then call updatePet().
+	// Call animatePet("is-resting") to use the ready-made breathing animation.
+
+	function decayPet() {
+		if (happiness > 0) {
+			happiness -= 1;
+			energy -= 2;
+		}
+
+		if (happiness === 0 || energy === 0) {
+			gameEnd = true;
+			updatePet();
+		}
+
+		updatePet();
+	}
+
+	// TODO: Decay over time
+	// Write a named function that lowers happiness by 1 without going below 0.
+	// Use setInterval to run it every 5000 milliseconds; save the timer ID.
+	// Start the timer once, not inside updatePet() or a button function.
+	// Check for game over after changing a value, then update the page.
+	// If you add energy or other attributes, lower them in this same timer.
+
+	// TODO: Game over
+	// Track whether the game has ended with a variable.
+	// Check after timer AND button changes: any implemented attribute at 0 ends it.
+	// Use clearInterval to stop the timer and set a game-over status message.
+	// Add is-game-over to .pet-creature to use the fade styling.
+	// Disable the care buttons and prevent their functions changing an ended game.
+
+	// Show the starting values when the page first loads.
+	updatePet();
 </script>
